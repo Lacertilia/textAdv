@@ -43,8 +43,8 @@
 
 		$_SESSION['page'] = $filteredPage;
 
-		if($_SESSION['page'] == 4){
-			$_SESSION['page']
+		if($_SESSION['page'] == 4 || $_SESSION['page'] == 2 || $_SESSION['page'] == 5){
+			$_SESSION['page'] = 1;
 		}
 
 		$stmt = $dbh->prepare("SELECT * FROM story WHERE id = :id");
