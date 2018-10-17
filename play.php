@@ -65,7 +65,6 @@
 			echo "<a href=\"?page=" . $val['target'] .  "\">" . $val['text'] . "</a><br>";
 		}
 
-		/*echo "<p>Requested page " . $filteredPage . "</p>";*/
 	} else if(isset($_SESSION['page'])) {
 		// TODO load page from db
 		// use for returning player / cookie
