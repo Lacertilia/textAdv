@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 17 okt 2018 kl 11:08
+-- Tid vid skapande: 18 okt 2018 kl 11:08
 -- Serverversion: 10.1.29-MariaDB
 -- PHP-version: 7.2.0
 
@@ -39,13 +39,14 @@ CREATE TABLE `story` (
 --
 
 INSERT INTO `story` (`id`, `text`, `place`) VALUES
-(1, 'Vem gillar du?', 'Här'),
-(2, 'Synd, personen gillar inte dig och du kommer dö ensam.', ''),
-(3, 'Är du säker på det?', ''),
-(4, 'Du spenderar ditt liv lycklig och ensam. Du dör tids nog lyckligt där du vill vara, med dig själv.', ''),
-(5, 'Jag förstår dig, alla älskar ju honom. Tyvärr är Jörgen inte tillgänglig för dig.', ''),
-(6, 'Vad kul för dig! Vill du försöka hitta en person som du kan spendera ditt liv med?', ''),
-(7, 'Du går ut i världen och vandrar 805 km och sedan 805 km till, vilket leder dig till en dörr.', '');
+(1, 'Vem gillar du?', 'Festen'),
+(2, 'Synd, personen gillar inte dig och du kommer dö ensam.', 'Festen'),
+(3, 'Är du säker på det?', 'Festen'),
+(4, 'Du spenderar ditt liv lycklig och ensam. Du dör tids nog lyckligt där du vill vara, med dig själv.', 'Hus på landet'),
+(5, 'Jag förstår dig, alla älskar ju honom. Tyvärr är Jörgen inte tillgänglig för dig.', 'Festen'),
+(6, 'Vad kul för dig! Vill du försöka hitta en person som du kan spendera ditt liv med?', 'Festen'),
+(7, 'Du går ut i världen och vandrar 805 km och sedan 805 km till, vilket leder dig till en dörr. Där knackar du på, men ingen svarar. Du känner hur marken börjar röra på sig och det öppnas en fallucka under dina fötter. Du ramlar ner och ser dig omkring och du får syn på tre andra personer. Det är dina bekanta Violetta, Doktorn och Flora. Vad gör du?', 'Världen'),
+(8, 'Violetta börjar gå mot dig med bestämda steg samtidigt som doktorn och Flora försvinner in i mörkret så du inte ser dem längre. Violetta sträcker fram hennes vänstra hand och lägger den på din axel. Hon vill säkert ha en kram då hon inte träffat dig på länge. Hon sträcker fram andra handen och omfamnar dig och börjar fråga hur du haft det, hur du mår och hur du kom hit.', 'Grottan');
 
 -- --------------------------------------------------------
 
@@ -71,7 +72,11 @@ INSERT INTO `storylinks` (`id`, `storyid`, `target`, `text`) VALUES
 (4, 1, 3, 'Dig Själv'),
 (5, 3, 6, 'Ja!'),
 (6, 3, 1, 'Nej'),
-(7, 6, 5, 'Nej, jag vill leva ensam.');
+(7, 6, 4, 'Nej, jag vill leva ensam.'),
+(8, 6, 7, 'Ja, jag vill leta efter någon att spendera mitt liv med.'),
+(9, 7, 8, 'Närma dig dina bekanta.'),
+(10, 7, 8, 'Försöka leta efter en väg ut.'),
+(11, 8, 9, '\"Jag har haft det bara bra och jag mår bra. Jag kom hit via att jag vandrade dag och natt, sammanlagt 1610 km långt.\"');
 
 --
 -- Index för dumpade tabeller
@@ -98,13 +103,13 @@ ALTER TABLE `storylinks`
 -- AUTO_INCREMENT för tabell `story`
 --
 ALTER TABLE `story`
-  MODIFY `id` int(16) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(16) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT för tabell `storylinks`
 --
 ALTER TABLE `storylinks`
-  MODIFY `id` int(16) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(16) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
