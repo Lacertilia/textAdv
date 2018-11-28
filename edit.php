@@ -12,7 +12,7 @@
 	</head>
 	<body style="background-color:grey; text-align:center;">
 		<nav class="navbar navbar-extend-lg bg-dark sticky-top">
-			<a href="index.php" class="btn btn-light">Hem</a>
+			<a href="index.php" class="navbar-brand"><img src="LaTraviataLogo.jpg" alt="ARENA"></a>
 			<a href="play.php" class="btn btn-light">Spela</a>
 			<a href="edit.php" class="btn btn-danger">Redigera</a>
 		</nav>
@@ -29,7 +29,7 @@
 				
 				if($_SESSION['loggedIn'] == true){
 
-					echo '<form action="" method="POST">
+					echo '<form action="edit.php" method="POST">
 						<textarea name="storyAdd" id="storyAdd" cols="30" rows="10"></textarea>
 						<textarea name="placeAdd" id="placeAdd" cols="30" rows="1"></textarea>
 						<input type="submit" name="submit" id="submit" Value="Lägg Till">

@@ -12,7 +12,7 @@
 </head>
 <body style="background-color:grey; text-align:center;">
 <nav class="navbar navbar-extend-lg bg-dark sticky-top">
-	<a href="index.php" class="btn btn-light">Hem</a>
+	<a href="index.php" class="navbar-brand"><img src="LaTraviataLogo.jpg" alt="ARENA"></a>
 	<a href="play.php" class="btn btn-danger">Spela</a>
 	<a href="edit.php" class="btn btn-light">Redigera</a>
 </nav>	
